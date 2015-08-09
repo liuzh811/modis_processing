@@ -103,10 +103,10 @@ for(i in 1:5){text(0.5+1.2*(i-1),-2.5, labels=a$var[i],cex=1.5, srt=45)}
 text(0.5+1.2*(i-1),14,labels="(a)",cex=2)
 text(0.7,13,labels="17.3",cex=1.5, srt=90)
 
-xposition = c(0.08, 0.16, 0.25, 0.34, 0.42)
+xposition = c(0.08, 0.17, 0.25, 0.335, 0.425)
 #plot margial effects
 for (i in 1:5){
-par(fig = c(xposition[i]-0.05, xposition[i]+0.05, 0.65, 0.77), new = TRUE)
+par(fig = c(xposition[i]-0.06, xposition[i]+0.06, 0.65, 0.77), new = TRUE)
 mar=c(0,0,0,0)
 if (i == 3){
 plot(pred.list[[i]][,1], pred.list[[i]][,2],col = a.col[i],xaxt='n',yaxt='n',xlim = c(0,0.2),axes=FALSE)
@@ -136,10 +136,10 @@ barplot(height=b$rel.inf[1:6],horiz=FALSE,xlab="",
 for(i in 1:6){text(0.5+1.2*(i-1),-2.5, labels=b$var[i],cex=1.5, srt=45)}
 text(0.5+1.2*(i-1),14,labels="(b)",cex=2)
 
-xposition = c(0.07, 0.14, 0.212, 0.287, 0.36, 0.435)+0.5
+xposition = c(0.075, 0.15, 0.215, 0.287, 0.35, 0.43)+0.5
 #plot margial effects
 for (i in 1:6){
-par(fig = c(xposition[i]-0.05, xposition[i]+0.05, 0.65, 0.77), new = TRUE)
+par(fig = c(xposition[i]-0.055, xposition[i]+0.055, 0.65, 0.77), new = TRUE)
 mar=c(0,0,0,0)
 if(i == 2 | i == 6){
 plot(pred.list.fs[[i]][,1], pred.list.fs[[i]][,2],  col = b.col[i],xaxt='n',yaxt='n',xlim = c(0.1,1), axes=FALSE)
@@ -172,10 +172,10 @@ for(i in 1:5){text(0.5+1.2*(i-1),-2.5, labels=b2$var[i],cex=1.5, srt=45)}
 text(0.5+1.2*(i-1),14,labels="(c)",cex=2)
 text(0.7,13,labels="42.3",cex=1.5, srt=90)
 
-xposition = c(0.08, 0.16, 0.25, 0.34, 0.42)
+xposition = c(0.075, 0.16, 0.245, 0.33, 0.415)
 #plot margial effects
 for (i in 1:5){
-par(fig = c(xposition[i]-0.05, xposition[i]+0.05, 0.13, 0.25), new = TRUE)
+par(fig = c(xposition[i]-0.055, xposition[i]+0.065, 0.13, 0.25), new = TRUE)
 mar=c(0,0,0,0)
 if(i == 2){
 plot(pred.list.per[[i]][,1], pred.list.per[[i]][,2],  col = b2.col[i],xaxt='n',yaxt='n',xlim = c(0,0.2), axes=FALSE)
