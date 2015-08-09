@@ -16,18 +16,14 @@ Variable.list2 = c("Gras", "PCDF", "InDF", "PJW", "PIPO", "Salp", "Mixd", "Hdwd"
 					"WMx","WMn","H90Ao","HAo", "HPAo","HWAo", "LOshp" ,"Calacre_ha","FSH","FSH_PRO")
 			
 
+#set color scheme
 Variable.list1.c = c(rep("lightgreen", 13), rep("lightcoral", 2), rep("skyblue", 3), rep("yellow3", 13), "lightcoral", "lightcoral" , "lightcoral")
 Variable.list1.c = cbind(Variable.list1, Variable.list1.c)
 
 Variable.list2.c = c(rep("lightgreen", 13), rep("lightcoral", 2), rep("skyblue", 3), rep("yellow3", 17), "lightcoral", "lightcoral" , "lightcoral", "lightcoral")
 Variable.list2.c = cbind(Variable.list2, Variable.list2.c)
 
-png(file = "D:\\dataset\\MTBSdata\\EM_revision\\Data2_0516\\VariInfluence2_0625.png", width = 2000, height = 2000, units = "px", res = 300)
-par(mfrow=c(3,1),mar=c(0,3,1,0),oma=c(0,3,0,0))
-
-
-
-
+#get predictions
 Fire.1 = read.csv("Fire.1.csv")
 Fire.1 = Fire.1[,-1]
 Fire.1 = as.data.frame(Fire.1)
